@@ -22,16 +22,16 @@ A WordPress admin user and MariaDB user are created via the environment variable
 
 In order to quickly get started with the project follow these steps:
 
-1. clone the repository
-1. navigate to the repository
-1. configure required application environment variables
+1. Clone the repository
+1. Navigate to the repository
+1. Configure required application environment variables
     1. `cp example.env .env`
-    1. edit the .env file
-1. build and run the containers
+    1. Edit the .env file
+1. Build and run the containers
     - `docker compose up -d`
-1. (optional) show container logs
+1. (Optional) Show container logs
     - `docker compose logs -f`
-1. verify the application is running by visiting `localhost:8080` (or the port you configured in the .env)
+1. Verify the application is running by visiting `<your-ip>:8080` (or the port you configured in the .env)
 
 ## Usage
 
