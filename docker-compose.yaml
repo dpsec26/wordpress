@@ -1,0 +1,24 @@
+services:
+  wordpress:
+    image: bitnami/wordpress:latest
+    restart: on-failure
+    ports:
+      - "${WORDPRESS_PORT:-8080}:8080"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - wordpress_data:/bitnami/wordpress
+
+  db:
+    image: bitnami/mariadb:latest
+    restart: on-failure
+    env_file:
+      - .env
+    volumes:
+      - db_data:/bitnami/mariadb
+
+volumes:
+  db_data:
+  wordpress_data:
